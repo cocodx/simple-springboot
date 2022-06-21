@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>buy源码-首页</title>
+    <link rel="stylesheet" type="text/css" href="/static/layui/css/layui.css">
+    <style>
+        .some_block{
+            border: 1px solid #ecebeb
+        }
+        .image_block{
+            height: 170px;width: auto
+        }
+    </style>
+    <script src="/static/layui/layui.js"></script>
+    <script>
+        layui.use(['laypage','layer'], function(){
+            var laypage = layui.laypage;
+            var layer = layui.layer;
+
+            layer.msg("hello world");
+            //执行一个laypage实例
+            laypage.render({
+                elem: 'test1' //注意，这里的 test1 是 ID，不用加 # 号
+                ,count: 50 //数据总数，从服务端得到
+            });
+        });
+    </script>
+</head>
+<body>
+
+    <div class="layui-container" style="background-color: #FFFFFF;height: 1000px">
+        <div class="layui-row">
+            <div class="layui-col-md12" style="height: 64px;font-size: 20px;color: black">
+                <div th:text="${title}">
+            </div>
+        </div>
+        <div class="layui-row">
+            <div class="layui-col-md3" style="height: 200px;background-color: #00F7DE">3列</div>
+            <div class="layui-col-md9" style="height: 200px;background-color: #1E9FFF">9列</div>
+        </div>
+
+        <!--分页展示商品的代码-->
+        <div class="layui-container" style="background-color: #FFFFFF;height: 700px">
+            <div class="layui-row">
+                <!-- 图片的浓缩图，然后还有树形文字 -->
+                <div class="layui-col-md3 some_block" style="height: 200px;">
+                    <div class="layui-row" style="height: 30px">
+                        <div>图书管理系统</div>
+                    </div>
+                    <div class="layui-row" style="height: 170px">
+                        <image class="image_block" src="/static/image/1.jpg"></image>
+                    </div>
+                </div>
+                <div class="layui-col-md3 layui-col-md-offset1 some_block" style="height: 200px;">
+                    <div class="layui-row" style="height: 30px">
+                        <div>图书管理系统</div>
+                    </div>
+                    <div class="layui-row" style="height: 170px">
+                        <image class="image_block" src="/static/image/1.jpg"></image>
+                    </div>
+                </div>
+                <div class="layui-col-md3 layui-col-md-offset1 some_block" style="height: 200px;">
+                    <div class="layui-row" style="height: 30px">
+                        <div>图书管理系统</div>
+                    </div>
+                    <div class="layui-row" style="height: 170px">
+                        <image class="image_block" src="/static/image/1.jpg" ></image>
+                    </div>
+                </div>
+            </div>
+            <div class="layui-row">
+                <div class="layui-col-md3 some_block" style="height: 200px;">
+                    <div class="layui-row" style="height: 30px">
+                        <div>图书管理系统</div>
+                    </div>
+                    <div class="layui-row" style="height: 170px">
+                        <image class="image_block" src="/static/image/1.jpg"></image>
+                    </div>
+                </div>
+                <div class="layui-col-md3 layui-col-md-offset1 some_block" style="height: 200px;">
+                    <div class="layui-row" style="height: 30px">
+                        <div>图书管理系统</div>
+                    </div>
+                    <div class="layui-row" style="height: 170px">
+                        <image class="image_block" src="/static/image/2.jpg"></image>
+                    </div>
+                </div>
+                <div class="layui-col-md3 layui-col-md-offset1 some_block" style="height: 200px;">
+                    <div class="layui-row" style="height: 30px">
+                        <div>图书管理系统</div>
+                    </div>
+                    <div class="layui-row" style="height: 170px">
+                        <image  class="image_block" src="/static/image/3.jpg"></image>
+                    </div>
+                </div>
+            </div>
+            <div class="layui-row">
+                <div class="layui-col-md3 some_block" style="height: 200px;">
+                    <div class="layui-row" style="height: 30px">
+                        <div>图书管理系统</div>
+                    </div>
+                    <div class="layui-row" style="height: 170px">
+                        <image src="/static/image/3.jpg" class="image_block"></image>
+                    </div>
+                </div>
+                <div class="layui-col-md3 layui-col-md-offset1 some_block" style="height: 200px;">
+                    <div class="layui-row" style="height: 30px">
+                        <div>图书管理系统</div>
+                    </div>
+                    <div class="layui-row" style="height: 170px">
+                        <image  class="image_block" src="/static/image/4.jpg"></image>
+                    </div>
+                </div>
+                <div class="layui-col-md3 layui-col-md-offset1 some_block" style="height: 200px;">
+                    <div class="layui-row" style="height: 30px">
+                        <div>图书管理系统</div>
+                    </div>
+                    <div class="layui-row" style="height: 170px">
+                        <image  class="image_block" src="/static/image/4.jpg"></image>
+                    </div>
+                </div>
+            </div>
+            <div class="layui-row">
+                <div class="layui-col-md12" style="height: 50px">
+                    <div id="pageComponent"></div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="layui-fluid" style="background-color: pink;height: 200px">
+        底部
+    </div>
+
+
+</body>
+</html>

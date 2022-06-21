@@ -8,6 +8,6 @@
        http://www.springframework.org/schema/context/spring-context.xsd">
 
 
-    <bean name="weather" class="com.springboot.learn.Weather"/>
+<!--    <bean name="weather" class="com.springboot.learn.Weather"/>-->
 
 </beans>
